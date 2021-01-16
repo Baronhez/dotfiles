@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/baronhez/Documentos/screenshots'
+let g:netrw_dirhist_2='/home/baronhez/Documentos/screenshots/.zshrc'
+let g:netrw_dirhist_1='/home/baronhez/Documentos/screenshots'
+let g:netrw_dirhist_0='/home/baronhez/Documentos/screenshots/.zshrc'
+let g:netrw_dirhist_9='/home/baronhez/Documentos/screenshots'
+let g:netrw_dirhist_8='/home/baronhez/Documentos/screenshots/.zshrc'
+let g:netrw_dirhist_7='/home/baronhez/Documentos/screenshots'
+let g:netrw_dirhist_6='/home/baronhez/Documentos/screenshots/.zshrc'
+let g:netrw_dirhist_5='/home/baronhez'
+let g:netrw_dirhist_4='/home/baronhez/.vimrc'
