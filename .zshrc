@@ -161,10 +161,17 @@ alias la='colorls -lA --sd --group-directories-first'
  function rn(){
          ranger
 }
+ #See my picom config
+ alias picomconfig='vim ~/.config/picom/picom.conf'
+ #See my ip information
  alias curl myip='curl ipinfo.io'
+ #See my blueman GUI in order to connect any device with bluetooth
  alias blueman='blueman-manager'
+ #Access to my i3-WM Configuration File
  alias i3config='vim ~/.config/i3/config'
- alias polyconfig='vim ~/.config/polybar/config'
+ #Access to my Polybar Configuration File
+ alias polyconfig='vim ~/.config/polybar.old/config'
+ #Access to my ZSH Configuration File
  alias zshconfig='vim ~/.zshrc'
 # Cd to Cursos-apuntes
 function shots(){
@@ -173,7 +180,6 @@ function shots(){
 alias feh='feh -F'
 neofetch | lolcat
 chuck | lolcat
-
 
 # User configuration
 
