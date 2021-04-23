@@ -12,7 +12,7 @@ export ZSH="/home/baronhez/.oh-my-zsh"
 #ZSH_THEME="powerlevel9k/powerlevel9k"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE='nerdfont-complete'
-
+#Jonathan del futuro, como sé que eres tan cafre como para romper esto de nuevo, te lo pondré fácil. Pon este comando para arreglar las fuentes de powerline tras reinstalar las fuentes. De nada, inútil.
 #sudo locale-gen "en_US.UTF-8" But first you need to unmark "en_US.UTF-8" in /etc/locale
 
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
@@ -170,9 +170,11 @@ alias la='colorls -lA --sd --group-directories-first'
  #Access to my i3-WM Configuration File
  alias i3config='vim ~/.config/i3/config'
  #Access to my Polybar Configuration File
- alias polyconfig='vim ~/.config/polybar.old/config'
+ alias polyconfig='vim ~/.config/polybar/config'
  #Access to my ZSH Configuration File
  alias zshconfig='vim ~/.zshrc'
+ #Access to my Alacritty Configuration File
+ alias alaconfig='vim ~/.config/alacritty/alacritty.yml'
 # Cd to Cursos-apuntes
 function shots(){
          cd /home/baronhez/Documentos/screenshots
@@ -180,7 +182,12 @@ function shots(){
 alias feh='feh -F'
 neofetch | lolcat
 chuck | lolcat
-
+# Alias for Rick Roll
+alias rick= 'curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+#ZSH insuler
+if [ -f /etc/bash.command-not-found ]; then
+    . /etc/bash.command-not-found
+fi
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
