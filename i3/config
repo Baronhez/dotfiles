@@ -131,10 +131,10 @@ bindsym Mod1+minus scratchpad show
 
 #My own keybindings
 bindsym $mod+Shift+t exec telegram-desktop; workspace 2
-
 bindsym $mod+Shift+f exec firefox; workspace 1
 #bindsym Print exec screenshot
-bindsym Mod4+Print exec maim -s --hidecursor ~/Documentos/screenshots/$(date +%s).png
+#bindsym Mod4+Print exec maim -s --hidecursor ~/Documentos/screenshots/$(date +%s).png
+bindsym Mod4+Print exec maim -s --hidecursor | xclip -selection clipboard -t image/png 
 bindsym Mod4+Shift+Print exec maim --hidecursor ~/Documentos/screenshots/$(date +%s).png
 bindsym Print exec maim --hidecursor | xclip -selection clipboard -t image/png 
 
@@ -192,16 +192,19 @@ for_window [class=".*"] split toggle #toggles split at each new window
 
 assign [class="firefox"] $ws1  
 assign [class="TelegramDesktop"] $ws2
-assign [class="Terminator"] $ws3 
+assign [class="Alacritty"] $ws3 
 assign [class="Nemo"] $ws5
+assign [class="Virt-manager"] $ws6 
 assign [class="Vlc"] $ws8
+assign [class="code-oss"] $ws9
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-
+#Run Qemu(KVM)
+bindsym $mod+Shift+v exec virt-manager; workspace 6
 #Run file manager (Nemo)
 bindsym $mod+Shift+n exec nemo; workspace 5
 # resize window (you can also use the mouse for that)
@@ -247,6 +250,7 @@ bindsym $mod+Shift+x exec i3clock
 
 for_window [class="Navigator"] floating disable
 
+
 ## Brightness buttons
 
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight +10
@@ -290,13 +294,15 @@ exec_always --no-startup-id compton -f
 #Execute firefox while starting
 #exec_always firefox
 #Wallpaper 
-exec_always feh --bg-scale /home/baronhez/Downloads/wallpaper.jpg
-#Mouse pointer
-exec_always xset m 8192/1 0
+#exec_always feh --bg-scale /home/baronhez/Downloads/wallpaper.jpg
+exec_always dwall -p -s tokyo 
+#Change cursor speed and sensitivity
+exec sudo /etc/cursorspeed.sh
 #Terminal transparency
 exec /usr/bin/compton --config /home/baronhez/.compton.conf~.i3/config
 exec xcompmgr -c -f -n
 #XKeyboard
-exec_always setxkbmap -model pc104 -layout us,es -variant altgr-intl, -option grp:alt_shift_toggle
+#exec_always setxkbmap -model pc104 -layout us,es -variant altgr-intl, -option grp:alt_shift_toggle
+exec_always setxkbmap -model pc104 -layout us,es -variant intl, -option grp:alt_shift_toggle
 #Polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh 
+exec_always --no-startup-id $HOME/.config/polybar/shades/launch.sh 
