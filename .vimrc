@@ -14,6 +14,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'preservim/nerdtree'
+Plugin 'nordtheme/vim'
 " Plugin 'valloric/youcompleteme'
 " Plugin 'vim-python/python-syntax'
 " Plugin 'mattn/emmet-vim'
@@ -72,7 +73,7 @@ nnoremap <Space> i<Space><Esc>
 set ignorecase
 
 " Peachpuff colorscheme
-colorscheme peachpuff
+colorscheme nord
 
 " Changes color background of the line you are in
 set cursorline
