@@ -1,0 +1,6 @@
+#!/bin/bash
+
+#start swwww
+swww query || swww init
+wallpaper=$(find ~/pictures/wallpapers -type f | shuf --random-source=/dev/urandom -n 1)
+swww img $wallpaper
