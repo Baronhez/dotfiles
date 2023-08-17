@@ -10,7 +10,7 @@ export ZSH="/home/baronhez/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="powerlevel9k/powerlevel9k"
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_MODE='nerdfont-complete'
 #Jonathan del futuro, como sé que eres tan cafre como para romper esto de nuevo, te lo pondré fácil. Pon este comando para arreglar las fuentes de powerline tras reinstalar las fuentes. De nada, inútil.
 #sudo locale-gen "en_US.UTF-8" But first you need to unmark "en_US.UTF-8" in /etc/locale
@@ -134,7 +134,6 @@ POWERLEVEL9K_BATTERY_ICON='\UF1E6'
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git
-	chucknorris
 	zsh-syntax-highlighting
 	zsh-autosuggestions	
 	history
@@ -142,7 +141,6 @@ plugins=(git
 	catimg
 	colored-man-pages
 	zsh-interactive-cd	
-	
 	)
 
 source $ZSH/oh-my-zsh.sh
@@ -161,14 +159,12 @@ alias la='colorls -lA --sd --group-directories-first'
  function rn(){
          ranger
 }
- #See my picom config
- alias picomconfig='vim ~/.config/picom/picom.conf'
  #See my ip information
  alias curl myip='curl ipinfo.io'
  #See my blueman GUI in order to connect any device with bluetooth
  alias blueman='blueman-manager'
  #Access to my i3-WM Configuration File
- alias i3config='vim ~/.config/i3/config'
+ alias hyprconfig='vim ~/.config/hypr/hyprland.conf'
  #Access to my Polybar Configuration File
  alias polyconfig='vim ~/.config/polybar/config'
  #Access to my ZSH Configuration File
@@ -180,10 +176,7 @@ function shots(){
          cd /home/baronhez/Documentos/screenshots
 }
 alias feh='feh -F'
-neofetch | lolcat
-chuck | lolcat
-# Alias for Rick Roll
-alias rick= 'curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+fastfetch
 #ZSH insuler
 if [ -f /etc/bash.command-not-found ]; then
     . /etc/bash.command-not-found
