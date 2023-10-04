@@ -15,6 +15,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'preservim/nerdtree'
 Plugin 'nordtheme/vim'
+Plugin 'frazrepo/vim-rainbow'
 " Plugin 'valloric/youcompleteme'
 " Plugin 'vim-python/python-syntax'
 " Plugin 'mattn/emmet-vim'
@@ -166,3 +167,6 @@ highlight Pmenu ctermfg=15 ctermbg=4 guifg=#ffffff guibg=#000000
 "highlight link htmlTag htmlTagName
 "highlight link htmlEndTag htmlTagName
 "
+
+" Enable rainbow brackets
+let g:rainbow_active = 1
