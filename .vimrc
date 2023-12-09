@@ -1,6 +1,6 @@
    
 " Vim vundle
-
+set nofoldenable    " disable folding
 set nocompatible              " required
 filetype off                  " required
 
