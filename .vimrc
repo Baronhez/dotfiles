@@ -170,3 +170,7 @@ highlight Pmenu ctermfg=15 ctermbg=4 guifg=#ffffff guibg=#000000
 
 " Enable rainbow brackets
 let g:rainbow_active = 1
+
+" Enable smooth scrolling
+set t_TI=^[[4?h
+set t_TE=^[[4?l
